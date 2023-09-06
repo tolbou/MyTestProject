@@ -15,4 +15,5 @@ public class UserController {
 		model.addAttribute("hello", "Hello World");
 		return "index";
 	}
+	//
 }
