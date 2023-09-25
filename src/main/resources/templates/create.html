@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ユーザー登録画面</title>
+</head>
+<body>
+
+    <!-- ユーザー登録フォーム -->
+    <form action="/register" method="post" enctype="multipart/form-data">
+        <!-- ユーザー名入力 -->
+        <label for="username">ユーザー名:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+
+        <!-- メールアドレス入力 -->
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <!-- パスワード入力 -->
+        <label for="password">パスワード:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <!-- 誕生日入力（カレンダータイプ） -->
+        <label for="birthdate">誕生日:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        <br>
+
+        <!-- 入社日入力（カレンダータイプ） -->
+        <label for="joinDate">入社日:</label>
+        <input type="date" id="joinDate" name="joinDate" required>
+        <br>
+
+        <!-- プロフィール画像アップロード -->
+        <label for="profileImage">プロフィール画像:</label>
+        <input type="file" id="profileImage" name="profileImage" accept="image/*">
+        <br>
+
+        <!-- 役職選択 -->
+        <label for="position">役職:</label>
+        <select id="position" name="position">
+            <option value="manager">マネージャー</option>
+            <option value="staff">スタッフ</option>
+            <option value="intern">インターン</option>
+            <!-- 必要に応じて他の役職も追加できます -->
+        </select>
+        <br>
+
+        <!-- 登録ボタン -->
+        <input type="submit" value="登録">
+    </form>
+
+</body>
+</html>

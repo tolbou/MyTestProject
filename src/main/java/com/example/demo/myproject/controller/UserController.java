@@ -1,19 +1,33 @@
 package com.example.demo.myproject.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserController {
 
-	@RequestMapping("/index")
-	public String index(Model model) {
-		
-		model.addAttribute("hello", "Hello World");
-		return "index";
-	}
-	//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
+    @GetMapping("/")
+    public String index() {
+        return "index";
+    }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+    
+    @GetMapping("/logout")
+    public String logout() {
+        return "logout";
+    }
+
+    @GetMapping("/general")
+    public String general() {
+        return "general";
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
+    }
 }
